@@ -154,6 +154,7 @@ class NoteDetailFragment : Fragment() {
 
     private fun setUpInkMode(view: View) {
         drawView = view.findViewById(R.id.draw_view)
+        drawView.rotated = MainActivity.isRotated(requireActivity())
 
         val clearButton = view.findViewById<MaterialButton>(R.id.clear)
         clearButton.setOnClickListener { clearDrawing() }
